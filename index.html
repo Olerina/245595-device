@@ -1,12 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
 
-  </body>
+<body>
+  <header class="container">
+    <div class="header-logo">
+      <a href="#">Device</a>
+    </div>
+    <div class="navigation">
+      <ul>
+        <li>
+          <form action="https://echo.htmlacademy.ru" method="get" class="search">
+            <input type="search" name="search" placeholder="Поиск по сайту">
+            <input type="submit" value="Отправить" class="search-btn">
+          </form>
+        </li>
+        <li>
+          <div class="user-block">
+            <!--Оставлен только блок незарегистрированного пользователя, согласно макета-->
+            <div class="user-out">
+              <a class="login user-btn" href="#">Войти</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Сравнить</a>
+        </li>
+        <li>
+          <a href="#">Корзина</a>
+        </li>
+      </ul>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Каталог товаров</a>
+          <ul>
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
+            <li><a href="#">Фитнесс-браслеты</a></li>
+            <li><a href="#">Умные часы</a></li>
+            <li><a href="#">Квадрокоптеры</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="promo-slider">
+      <input type="radio" id="btn-1" name="toggle" checked="checked">
+      <input type="radio" id="btn-2" name="toggle">
+      <input type="radio" id="btn-3" name="toggle">
+      <div class="slider-controls">
+        <label for="btn-1"></label>
+        <label for="btn-2"></label>
+        <label for="btn-3"></label>
+      </div>
+      <article class="promo-slide-1">
+        <img src="../img/promo-slide-1.png" alt="Монопод" width="384" height="486">
+        <p>Делай селфи, как Бен Стиллер!</p>
+        <p>
+          Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+        </p>
+        <a href="#">Подробнее</a>
+        <table>
+          <tr>
+            <td>8,5 м</td>
+            <td>5 кг</td>
+            <td>Карбон</td>
+          </tr>
+          <tr>
+            <td>Длина палки</td>
+            <td>Вес палки</td>
+            <td>Материал</td>
+          </tr>
+        </table>
+      </article>
+      <article class="promo-slide-2">
+        <img src="../img/promo-slide-2.png" alt="Умные часы" width="345" height="485">
+        <p>Худеем правильно!</p>
+        <p>
+          Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+        </p>
+        <a href="#">Подробнее</a>
+        <table>
+          <tr>
+            <td>48 часов</td>
+          </tr>
+          <tr>
+            <td>Без подзарядки</td>
+            <td>Вес палки</td>
+            <td>Материал</td>
+          </tr>
+        </table>
+      </article>
+      <article class="promo-slide-3">
+        <img src="../img/promo-slide-3.png" alt="Квадрокоптер" width="526" height="334">
+        <p>Порхает как бабочка, жалит как пчела!</p>
+        <p>
+          Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+        </p>
+        <a href="#">Подробнее</a>
+        <table>
+          <tr>
+            <td>800 м</td>
+            <td>50 м</td>
+          </tr>
+          <tr>
+            <td>Дальность полета</td>
+            <td>Радиус поражения</td>
+          </tr>
+        </table>
+      </article>
+
+
+    </section>
+  </main>
+
+
+</body>
+
 </html>
