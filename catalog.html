@@ -4,22 +4,28 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="container">
+  <header class="main-header container">
     <div class="header-logo">
-      <a href="#">Device</a>
+      <a href="index.html">Device</a>
     </div>
     <div class="navigation">
       <ul>
         <li>
-          <form action="https://echo.htmlacademy.ru" method="get" class="search">
-            <input type="search" name="search" placeholder="Поиск по сайту">
-            <input type="submit" value="Отправить" class="search-btn">
+          <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+            <p>
+              <label for="search" class="visually-hidden">Поиск по сайту</label>
+              <input type="search" name="search" placeholder="Поиск по сайту" id="search">
+            </p>
+            <p>
+              <label for="submit" class="visually-hidden">Найти</label>
+              <input type="submit" value="Найти" class="search-btn" id="submit">
+            </p>
           </form>
-        </li>
-        <li>
+        </li>        <li>
           <div class="user-block">
             <!--Оставлен только блок зарегистрированного пользователя, согласно макета-->
             <div class="user-in">
@@ -41,7 +47,7 @@
     <nav class="header-nav">
       <ul>
         <li>
-          <a href="#">Каталог товаров</a>
+          <a>Каталог товаров</a>
           <ul>
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="#">Моноподы для селфи</a></li>
@@ -92,23 +98,23 @@
               <ul class="brends-list">
                 <li class="brends-item">
                   <input type="checkbox" checked id="black">
-                  <label for="bosch">Черный</label>
+                  <label for="black">Черный</label>
                 </li>
                 <li class="brends-item">
                   <input type="checkbox" id="white">
-                  <label for="interscol">Белый</label>
+                  <label for="white">Белый</label>
                 </li>
                 <li class="brends-item">
                   <input type="checkbox" checked id="blue">
-                  <label for="makita">Синий</label>
+                  <label for="blue">Синий</label>
                 </li>
                 <li class="brends-item">
                   <input type="checkbox" checked id="red">
-                  <label for="dewalt">Красный</label>
+                  <label for="red">Красный</label>
                 </li>
                 <li class="brends-item">
                   <input type="checkbox" id="pink">
-                  <label for="hitachi">Розовый</label>
+                  <label for="pink">Розовый</label>
                 </li>
               </ul>
             </section>
@@ -117,15 +123,16 @@
               <ul class="energy-list">
                 <li class="energy-item">
                   <input type="radio" id="yes" name="radio" checked>
-                  <label for="accumulator">Есть</label>
+                  <label for="yes">Есть</label>
                 </li>
                 <li class="energy-item">
                   <input type="radio" id="no" name="radio">
-                  <label for="network">Нет</label>
+                  <label for="no">Нет</label>
                 </li>
               </ul>
             </section>
-            <input type="submit" value="Показать" class="catalog-submit">
+            <input type="submit" value="Показать" class="catalog-submit" id="catalog-submit">
+            <label for="catalog-submit" class="visually-hidden">Показать</label>
           </form>
         </div>
         <div class="catalog-right">
@@ -152,28 +159,28 @@
           <div class="catalog-item catalog-item-layout container">
             <article class="top-item">
               <div class="item-image">
-                <img src="img/.jpg" width="218" height="156" alt="Любительская селфи-палка">
+                <img src="img/item-1.jpg" width="218" height="156" alt="Любительская селфи-палка">
               </div>
               <h3><a  class="top-item-title" href="#">Любительская селфи-палка</a></h3>
               <div class="top-item-price">500 руб.</div>
             </article>
             <article class="top-item">
               <div class="item-image">
-                <img src="img/.jpg" width="218" height="156" alt="Профессиональная селфи-палка">
+                <img src="img/item-2.jpg" width="218" height="156" alt="Профессиональная селфи-палка">
               </div>
               <h3><a  class="top-item-title" href="#">Профессиональная селфи-палка</a></h3>
               <div class="top-item-price">1500 руб.</div>
             </article>
             <article class="top-item">
               <div class="item-image">
-                <img src="img/.jpg" width="218" height="156" alt="Непотопляемая селфи-палка">
+                <img src="img/item-3.jpg" width="218" height="156" alt="Непотопляемая селфи-палка">
               </div>
               <h3><a  class="top-item-title" href="#">Непотопляемая селфи-палка</a></h3>
               <div class="top-item-price">2500 руб.</div>
             </article>
             <article class="top-item top-new">
               <div class="item-image">
-                <img src="img/.jpg" width="218" height="156" alt="Селфи-палка Следуй за мной">
+                <img src="img/item-4.jpg" width="218" height="156" alt="Селфи-палка Следуй за мной">
               </div>
               <h3><a  class="top-item-title" href="#">Селфи-палка "Следуй за мной"</a></h3>
               <div class="top-item-price">4900 руб.</div>
@@ -188,12 +195,13 @@
           </div>
         </div>
       </div>
+    </div>
   </main>
   <footer>
     <div class="footer-top">
       <div class="footer-top-layout container">
         <div class="footer-logo">
-          <a class="footer-logo-link">Device</a>
+          <a href="index.html" class="footer-logo-link">Device</a>
         </div>
         <nav class="footer-nav">
           <ul>
@@ -250,7 +258,8 @@
       <textarea id="user-comment" name="comment" rows="6" required>В свободной форме</textarea>
     </form>
     <div class="write-submit">
-      <input type="submit" value="Отправить" class="btn write-btn" form="write-form">
+      <input type="submit" value="Отправить" class="btn write-btn" form="write-form" id="write-submit">
+      <label for="write-submit">Отправить</label>
     </div>
   </div>
   <div class="modal-content-map">
