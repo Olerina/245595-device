@@ -4,28 +4,24 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="main-header container">
     <div class="header-logo">
-      <a href="index.html">Device</a>
+      <a>Device</a>
     </div>
     <div class="navigation">
+      <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+        <label for="search" class="visually-hidden">Поиск по сайту</label>
+        <label for="submit" class="visually-hidden">Найти</label>
+        <input type="search" name="search" placeholder="Поиск по сайту" id="search" class="search-form-field">
+        <input type="submit" value="Найти" id="submit">
+      </form>
       <ul>
         <li>
-          <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
-            <p>
-              <label for="search" class="visually-hidden">Поиск по сайту</label>
-              <input type="search" name="search" placeholder="Поиск по сайту" id="search">
-            </p>
-            <p>
-              <label for="submit" class="visually-hidden">Найти</label>
-              <input type="submit" value="Найти" class="search-btn" id="submit">
-            </p>
-          </form>
-        </li>        <li>
           <div class="user-block">
             <!--Оставлен только блок зарегистрированного пользователя, согласно макета-->
             <div class="user-in">
@@ -45,10 +41,10 @@
       </ul>
     </div>
     <nav class="header-nav">
-      <ul>
+      <ul class="main-catalog">
         <li>
-          <a>Каталог товаров</a>
-          <ul>
+          <a class="index-catalog main-links" href="catalog.html">Каталог товаров</a>
+          <ul class="catalog-menu">
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="#">Моноподы для селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
@@ -57,9 +53,9 @@
             <li><a href="#">Квадрокоптеры</a></li>
           </ul>
         </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a class="main-links" href="#">Доставка</a></li>
+        <li><a class="main-links" href="#">Гарантия</a></li>
+        <li><a class="main-links" href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -75,10 +71,30 @@
       </div>
     </div>
     <div class="catalog-content">
+      <div class="catalog-titles container">
+        <p class="filter">Фильтр:</p>
+        <div class="catalog-sort">
+          <p>Сортировка:</p>
+          <ul class="sorting-left">
+            <li class="sorting-left-item">
+              <a class="sorting-item active-sorting">По цене</a>
+            </li>
+            <li class="sorting-left-item">
+              <a class="sorting-item" href="#">По типу</a>
+            </li>
+            <li class="sorting-left-item">
+              <a class="sorting-item last-sorting" href="#">По популярности</a>
+            </li>
+          </ul>
+          <div class="sorting-right">
+            <a class="sorting-item-up sorting-active" href="#">По возрастанию</a>
+            <a class="sorting-item-down" href="#">По убыванию</a>
+          </div>
+        </div>
+      </div>
       <div class="catalog-left">
         <div class="container">
           <form class="making-item" action="https://echo.htmlacademy.ru" method="post">
-            <p class="filter">Фильтр:</p>
             <div class="range-filter">
               <p class="price-selection">Стоимость:</p>
               <div class="range-controls">
@@ -95,24 +111,24 @@
             </div>
             <section class="option color">
               <h2 class="option-title">Цвет:</h2>
-              <ul class="brends-list">
-                <li class="brends-item">
+              <ul class="color-list">
+                <li class="color-item">
                   <input type="checkbox" checked id="black">
                   <label for="black">Черный</label>
                 </li>
-                <li class="brends-item">
+                <li class="color-item">
                   <input type="checkbox" id="white">
                   <label for="white">Белый</label>
                 </li>
-                <li class="brends-item">
+                <li class="color-item">
                   <input type="checkbox" checked id="blue">
                   <label for="blue">Синий</label>
                 </li>
-                <li class="brends-item">
+                <li class="color-item">
                   <input type="checkbox" checked id="red">
                   <label for="red">Красный</label>
                 </li>
-                <li class="brends-item">
+                <li class="color-item">
                   <input type="checkbox" id="pink">
                   <label for="pink">Розовый</label>
                 </li>
@@ -131,33 +147,19 @@
                 </li>
               </ul>
             </section>
-            <input type="submit" value="Показать" class="catalog-submit" id="catalog-submit">
+            <input type="submit" value="Показать" class="catalog-submit btn" id="catalog-submit">
             <label for="catalog-submit" class="visually-hidden">Показать</label>
           </form>
         </div>
         <div class="catalog-right">
           <div class="sorting">
-            <div class="container">
-              <p>Сортировка:</p>
-            </div>
-            <ul class="sorting-left">
-              <li class="sorting-left-item">
-                <a class="sorting-item active-sorting">По цене</a>
-              </li>
-              <li class="sorting-left-item">
-                <a class="sorting-item" href="#">По типу</a>
-              </li>
-              <li class="sorting-left-item">
-                <a class="sorting-item last-sorting" href="#">По популярности</a>
-              </li>
-            </ul>
-            <div class="sorting-right">
-              <a class="sorting-item-up sorting-active" href="#">По возрастанию</a>
-              <a class="sorting-item-down" href="#">По убыванию</a>
-            </div>
           </div>
           <div class="catalog-item catalog-item-layout container">
             <article class="top-item">
+              <div class="top-item-btn">
+                  <a class="item-buy btn" href="#">В корзину</a>
+                  <a class="item-bookmark" href="#">Добавить к сравнению</a>
+                </div>
               <div class="item-image">
                 <img src="img/item-1.jpg" width="218" height="156" alt="Любительская селфи-палка">
               </div>
@@ -165,6 +167,10 @@
               <div class="top-item-price">500 руб.</div>
             </article>
             <article class="top-item">
+              <div class="top-item-btn">
+                  <a class="item-buy btn" href="#">В корзину</a>
+                  <a class="item-bookmark" href="#">Добавить к сравнению</a>
+                </div>
               <div class="item-image">
                 <img src="img/item-2.jpg" width="218" height="156" alt="Профессиональная селфи-палка">
               </div>
@@ -172,6 +178,10 @@
               <div class="top-item-price">1500 руб.</div>
             </article>
             <article class="top-item">
+              <div class="top-item-btn">
+                  <a class="item-buy btn" href="#">В корзину</a>
+                  <a class="item-bookmark" href="#">Добавить к сравнению</a>
+                </div>
               <div class="item-image">
                 <img src="img/item-3.jpg" width="218" height="156" alt="Непотопляемая селфи-палка">
               </div>
@@ -179,18 +189,22 @@
               <div class="top-item-price">2500 руб.</div>
             </article>
             <article class="top-item top-new">
+              <div class="top-item-btn">
+                  <a class="item-buy btn" href="#">В корзину</a>
+                  <a class="item-bookmark" href="#">Добавить к сравнению</a>
+                </div>
               <div class="item-image">
                 <img src="img/item-4.jpg" width="218" height="156" alt="Селфи-палка Следуй за мной">
               </div>
               <h3><a  class="top-item-title" href="#">Селфи-палка "Следуй за мной"</a></h3>
               <div class="top-item-price">4900 руб.</div>
             </article>
-            <div class="navigation">
-              <a href="prev" class="page-number next-page">Назад</a>
+            <div class="catalog-navigation">
+              <a href="prev" class="next-page">Назад</a>
               <a class="page-number active-nav">1</a>
               <a href="#2" class="page-number">2</a>
               <a href="#3" class="page-number">3</a>
-              <a href="next" class="page-number next-page">Вперед</a>
+              <a href="next" class="next-page">Вперед</a>
             </div>
           </div>
         </div>
@@ -207,9 +221,8 @@
           <ul>
             <li>
               <div class="user-block">
-                <!--Оставлен только блок незарегистрированного пользователя, согласно макета-->
                 <div class="user-out">
-                  <a class="login user-btn" href="#">Войти</a>
+                  <a class="login user-btn" href="#">Выйти</a>
                 </div>
               </div>
             </li>
@@ -252,18 +265,15 @@
     <form id="write-form" class="modal-write-form" action="https://echo.htmlacademy.ru" method="post">
       <label class="user-name" for="user-name">Ваше имя:</label>
       <label class="user-email" for="email">Ваш e-mail:</label>
-      <input id="user-name" type="text" name="username" placeholder="Представьтесь, пожалуйста" required>
+      <input id="user-name" type="text" name="username" pattern="[A-Za-zА-Яа-яЁё]" placeholder="Представьтесь, пожалуйста" required>
       <input id="email" type="email" name="email" placeholder="Для отправки ответа" required>
       <label for="user-comment" class="user-comment">Текст письма:</label>
       <textarea id="user-comment" name="comment" rows="6" required>В свободной форме</textarea>
     </form>
-    <div class="write-submit">
+    <div class="write-submit btn">
       <input type="submit" value="Отправить" class="btn write-btn" form="write-form" id="write-submit">
-      <label for="write-submit">Отправить</label>
+      <label class="visually-hidden" for="write-submit" onclick="validate(this.form)">Отправить</label>
     </div>
-  </div>
-  <div class="modal-content-map">
-    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
   </div>
   <script src="js/script.js"></script>
 </body>

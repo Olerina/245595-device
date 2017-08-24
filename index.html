@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,19 +14,13 @@
       <a>Device</a>
     </div>
     <div class="navigation">
+      <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+        <label for="search" class="visually-hidden">Поиск по сайту</label>
+        <label for="submit" class="visually-hidden">Найти</label>
+        <input type="search" name="search" placeholder="Поиск по сайту" id="search" class="search-form-field">
+        <input type="submit" value="Найти" id="submit">
+      </form>
       <ul>
-        <li>
-          <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
-            <p>
-              <label for="search" class="visually-hidden">Поиск по сайту</label>
-              <input type="search" name="search" placeholder="Поиск по сайту" id="search">
-            </p>
-            <p>
-              <label for="submit" class="visually-hidden">Найти</label>
-              <input type="submit" value="Найти" class="search-btn" id="submit">
-            </p>
-          </form>
-        </li>
         <li>
           <div class="user-block">
             <!--Оставлен только блок незарегистрированного пользователя, согласно макета-->
@@ -43,9 +38,9 @@
       </ul>
     </div>
     <nav class="header-nav">
-      <ul>
+      <ul class="main-catalog">
         <li>
-          <a href="catalog.html">Каталог товаров</a>
+          <a class="index-catalog main-links" href="catalog.html">Каталог товаров</a>
           <ul class="catalog-menu">
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="#">Моноподы для селфи</a></li>
@@ -55,9 +50,9 @@
             <li><a href="#">Квадрокоптеры</a></li>
           </ul>
         </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a class="main-links" href="#">Доставка</a></li>
+        <li><a class="main-links" href="#">Гарантия</a></li>
+        <li><a class="main-links" href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -76,18 +71,17 @@
         <img src="img/slider-1.png" alt="Самая длинная палка для сэлфи" width="384" height="486">
         <p class="number-slide">01</p>
         <h2>Делай селфи, как Бен Стиллер!</h2>
-        <p>
-          Самая длинная палка для селфи доступна в нашем магазине.
-          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+        <p class="slider-text">
+          Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
         </p>
-        <a href="#">Подробнее</a>
+        <a href="#" class="btn slider-btn">Подробнее</a>
         <table>
-          <tr>
+          <tr class="features-value">
             <td>8,5 м</td>
             <td>5 кг</td>
             <td>Карбон</td>
           </tr>
-          <tr>
+          <tr class="features-type">
             <td>Длина палки</td>
             <td>Вес палки</td>
             <td>Материал</td>
@@ -95,36 +89,36 @@
         </table>
       </article>
       <article class="promo-slide-2">
-        <img src="../img/slider-2.png" alt="Умные часы" width="345" height="485">
+        <img src="img/slider-2.png" alt="Умные часы" width="345" height="485">
         <p class="number-slide">02</p>
         <h2>Худеем правильно!</h2>
-        <p>
+        <p class="slider-text">
           Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
         </p>
-        <a href="#">Подробнее</a>
+        <a href="#" class="btn slider-btn">Подробнее</a>
         <table>
-          <tr>
+          <tr class="features-value">
             <td>48 часов</td>
           </tr>
-          <tr>
+          <tr class="features-type">
             <td>Без подзарядки</td>
           </tr>
         </table>
       </article>
       <article class="promo-slide-3">
-        <img src="../img/slider-3.png" alt="Квадрокоптер" width="526" height="334">
+        <img src="img/slider-3.png" alt="Квадрокоптер" width="526" height="334">
         <p class="number-slide">03</p>
         <h2>Порхает как бабочка, жалит как пчела!</h2>
-        <p>
+        <p class="slider-text">
           Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
         </p>
-        <a href="#">Подробнее</a>
+        <a href="#" class="btn slider-btn">Подробнее</a>
         <table>
-          <tr>
+          <tr class="features-value">
             <td>800 м</td>
             <td>50 м</td>
           </tr>
-          <tr>
+          <tr class="features-type">
             <td>Дальность полета</td>
             <td>Радиус поражения</td>
           </tr>
@@ -205,16 +199,28 @@
     </section>
     <section class="top-maker container">
       <div class="top-maker-item">
-        <a class="maker-btn" href="#"><img src="img/logo-1.png" width="260" height="100" alt="djl"></a>
+        <a class="maker-btn" href="#">
+          <img src="img/logo-1.png" width="260" height="100" alt="djl">
+          <img src="img/logo-1-1.jpg" width="260" height="100" alt="djl">
+        </a>
       </div>
       <div class="top-maker-item">
-        <a class="maker-btn" href="#"><img src="img/logo-2.png" width="260" height="100" alt="Adgets"></a>
+        <a class="maker-btn" href="#">
+          <img src="img/logo-2.png" width="260" height="100" alt="Adgets">
+          <img src="img/logo-2-1.jpg" width="260" height="100" alt="Adgets">
+        </a>
       </div>
       <div class="top-maker-item">
-        <a class="maker-btn" href="#"><img src="img/logo-3.png" width="260" height="100" alt="Gopro"></a>
+        <a class="maker-btn" href="#">
+          <img src="img/logo-3.png" width="260" height="100" alt="Gopro">
+          <img src="img/logo-3-1.jpg" width="260" height="100" alt="Gopro">
+        </a>
       </div>
       <div class="top-maker-item">
-        <a class="maker-btn" href="#"><img src="img/logo-4.png" width="260" height="100" alt="Vive"></a>
+        <a class="maker-btn" href="#">
+          <img src="img/logo-4.png" width="260" height="100" alt="Vive">
+          <img src="img/logo-4-1.jpg" width="260" height="100" alt="Vive">
+        </a>
       </div>
     </section>
     <div class="information container">
@@ -297,14 +303,14 @@
     <form id="write-form" class="modal-write-form" action="https://echo.htmlacademy.ru" method="post">
       <label class="user-name" for="user-name">Ваше имя:</label>
       <label class="user-email" for="email">Ваш e-mail:</label>
-      <input id="user-name" type="text" name="username" placeholder="Представьтесь, пожалуйста" required>
+      <input id="user-name" type="text" name="username" pattern="[A-Za-zА-Яа-яЁё]" placeholder="Представьтесь, пожалуйста" required>
       <input id="email" type="email" name="email" placeholder="Для отправки ответа" required>
       <label for="user-comment" class="user-comment">Текст письма:</label>
       <textarea id="user-comment" name="comment" rows="6" required>В свободной форме</textarea>
     </form>
-    <div class="write-submit">
+    <div class="write-submit btn">
       <input type="submit" value="Отправить" class="btn write-btn" form="write-form" id="write-submit">
-      <label for="write-submit">Отправить</label>
+      <label class="visually-hidden" for="write-submit" onclick="validate(this.form)">Отправить</label>
     </div>
   </div>
   <div class="modal-content-map">
